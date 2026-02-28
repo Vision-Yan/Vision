@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vision. | Portfolio</title>
+    <link rel="stylesheet" href="css/ArtTestStyle.css">
+</head>
+<body>
+
+    <div class="ambient-glow"></div>
+
+    <!-- 左侧侧边栏 (Sidebar) -->
+    <aside class="sidebar" id="sidebar">
+        <div>
+            <div class="brand">
+                <h1>Vision.</h1>
+            </div>
+            <!-- 左侧新增的描述性文字 -->
+            <div class="brand-desc">
+                《界外狂潮》于2025年3月7日全球登陆Steam平台，截至2025年底，Steam平台累计下载量 460 万，是2025年Steam表现最佳的国产免费射击游戏之一
+            </div>
+        </div>
+
+        <div class="sldebar-bottom">
+            <nav class="nav-links">
+                <a class="nav-item active" onclick="showHome()">Work</a>
+                <a class="nav-item" onclick="showAbout()">About</a>
+            </nav>
+            <div class="social-links">
+                <div style="margin-top: 35px;">
+                    &copy; 2026 Vision. Works 
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- 右侧滚动内容区 -->
+    <main class="main-scroll-area">
+        <div class="center-wrapper">
+            
+            <!-- 1. 首页列表 (Home / List View) -->
+            <div id="home-view" class="project-list">
+                <div class="section-title">Personal Selected Works Collection</div>
+                <div class="section-subtitle">个人作品精选</div>
+                <!-- Project 01 -->
+                <article class="project-card" onclick="showDetail('detail-01')">
+                    <div class="card-image">
+                        <!-- 占位图 -->
+                        <img src="pic/幻彩裂变宣传图.jpg" alt="Abstract 1">
+                    </div>
+                    <div class="card-info">
+                        <div class="card-meta">Legend Level</div>
+                        <h3 class="card-title">S1/S4 传说 幻彩裂变系列</h3>
+                        <p class="card-desc">《界外狂潮》幻彩裂变系列是项目上线后的首款极致品级（红品）标杆级武器皮肤系列，覆盖突击步枪、冲锋枪、狙击步枪等核心武器，极具视觉辨识度</p>
+                    </div>
+                </article>
+
+                <!-- Project 02 -->
+                <article class="project-card" onclick="showDetail('detail-02')">
+                    <div class="card-image">
+                        <img src="pic/幽灵舰队宣传图.jpg" alt="Abstract 2">
+                    </div>
+                    <div class="card-info">
+                        <div class="card-meta">Legend Level</div>
+                        <h3 class="card-title">S2 传说 幽灵舰队系列</h3>
+                        <p class="card-desc">《界外狂潮》典藏级奖池系列套装，以深海幽灵船为设计主题，作为项目上线第二赛季的主力皮肤进行开发，枪身主体融入船身构造造型</p>
+                    </div>
+                </article>
+
+                <!-- Project 03 -->
+                <article class="project-card" onclick="showDetail('detail-03')">
+                    <div class="card-image">
+                        <img src="pic/爆裂引擎宣传图.jpg" alt="Abstract 3">
+                    </div>
+                    <div class="card-info">
+                        <div class="card-meta">Legend Level</div>
+                        <h3 class="card-title">S3 传说 爆裂摩托系列</h3>
+                        <p class="card-desc">《界外狂潮》典藏级奖池系列套装，以超跑赛车为设计灵感，枪身融入引擎、涡轮、排气管等赛车元素，切枪、检视触发专属发动机轰鸣声</p>
+                    </div>
+                </article>
+
+                <article class="project-card" onclick="showDetail('detail-04')">
+                    <div class="card-image">
+                        <img src="pic/盛夏水枪宣传图.jpg" alt="Abstract 4">
+                    </div>
+                    <div class="card-info">
+                        <div class="card-meta">Epic Level</div>
+                        <h3 class="card-title">S2 珍品 盛夏水枪系列 </h3>
+                        <p class="card-desc">夏日限定典藏级系列，全枪械重构为水枪造型，明亮撞色搭配夏日清凉元素，开火、换弹复刻水枪喷水特效，娱乐性与颜值兼具</p>
+                    </div>
+                </article>
+
+                <article class="project-card" onclick="showDetail('detail-05')">
+                    <div class="card-image">
+                        <img src="pic/欢声笑语宣传图.jpg" alt="Abstract 5">
+                    </div>
+                    <div class="card-info">
+                        <div class="card-meta">Epic Level</div>
+                        <h3 class="card-title">S2 珍品 欢声笑语系列 </h3>
+                        <p class="card-desc">珍品级直售系列，以童趣欢乐为核心主题，枪身语言以扭蛋机、投币机设计的同时换弹触发投币专属音效与动画为主，主打轻松治愈的对局体验</p>
+                    </div>
+                </article>
+
+                <article class="project-card" onclick="showDetail('detail-06')">
+                    <div class="card-image">
+                        <img src="pic/都市夜舞宣传图.jpg" alt="Abstract 6">
+                    </div>
+                    <div class="card-info">
+                        <div class="card-meta">Epic Level</div>
+                        <h3 class="card-title">S1 珍品 都市夜舞系列 </h3>
+                        <p class="card-desc">珍品级直售系列，以灯光阑珊的霓虹都市为主要设计语言，以合成器音效作为枪身特殊效果的高质量皮肤</p>
+                    </div>
+                </article>
+
+                <article class="project-card" onclick="showDetail('detail-07')">
+                    <div class="card-image">
+                        <img src="pic/知心萌物宣传图.jpg" alt="Abstract 7">
+                    </div>
+                    <div class="card-info">
+                        <div class="card-meta">Epic Level</div>
+                        <h3 class="card-title">S3 珍品 知心萌物系列 </h3>
+                        <p class="card-desc">《小狗蛇点点》 IP 联动珍品级系列，融入小狗蛇、鲨猫、神烦鸟等萌宠元素，枪身Idle动态效果主打可爱治愈风格</p>
+                    </div>
+                </article>
+
+                <article class="project-card" onclick="showDetail('detail-08')">
+                    <div class="card-image">
+                        <img src="pic/冰雪风暴宣传图.jpg" alt="Abstract 8">
+                    </div>
+                    <div class="card-info">
+                        <div class="card-meta">Epic Level</div>
+                        <h3 class="card-title">S3 珍品 冰雪风暴系列 </h3>
+                        <p class="card-desc">圣诞冬日限定珍品级系列，以冬日庆典、冰雪童话为主题，枪身特殊积雪效果伴随动画动画动态展示营造冰雪氛围</p>
+                    </div>
+                </article>
+
+                <article class="project-card" onclick="showDetail('detail-09')">
+                    <div class="card-image">
+                        <img src="pic/碎片特警宣传图.png" alt="Abstract 9">
+                    </div>
+                    <div class="card-info">
+                        <div class="card-meta">Epic Level</div>
+                        <h3 class="card-title">S1-S4 典藏、珍品系列皮肤 </h3>
+                        <p class="card-desc">伴随S1-S4赛季的EpicB级皮肤，从通行证外放皮到活动赠送皮，涵盖多种风格以及设计语言</p>
+                    </div>
+                </article>
+            </div>
+
+            <!-- 2. 关于界面 (About View) - 重新加入 -->
+            <div id="about-view" class="about-view">
+                <div class="section-title">About Vision.</div>
+                <div class="about-card">
+                    <p class="about-intro">
+                        参与界外狂潮项目（FragPunk）的<strong>武器策划</strong>以及战斗策划工作
+                        负责项目武器皮肤S2-至今的商业化全流程开发设计以及内容落地<br><br>
+                        针对皮肤开发拥有一年以上工作经验，从基础原画设计到具体动画、特效音效、文本本地化等内容的推进优化，持续输出高质量、好手感的武器皮肤设计<br><br>
+                        具有两年游戏项目开发经验，上线项目主要负责的枪械以及皮肤部分持续保持良好营收<br><br>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <h4>核心能力</h4>
+                            <p>沟通协作、项目管理、问题解决、跨团队对接</p>
+                        </div>
+                        <div class="skill-item">
+                            <h4>联系电话</h4>
+                            <p>+86 18929152369</p>
+                        </div>
+                        <div class="skill-item">
+                            <h4>个人邮箱</h4>
+                            <p>2913986927@qq.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3.  (Detail Views) - 独立内容 -->
+            <!-- Detail 01 -->
+            <div id="detail-01" class="detail-view">
+                <div class="back-btn" onclick="showHome()"><span>←</span> Back</div>
+                <div class="detail-header">
+                    <h2>幻彩裂变 系列</h2>
+                </div>
+                <div class="detail-gallery">
+                    <div class="gallery-item"><img src="pic/幻彩裂变/战备库枪械展示.png" alt="Detail 1"></div>
+                    <div class="gallery-item"><img src="pic/幻彩裂变/武器抽奖界面.png" alt="Detail 2"></div>
+                </div>
+                <div class="detail-content">
+                    <div class="text-block">
+                        <p>幻彩裂变系列是《界外狂潮》项目首款极致品级（红品）标杆皮肤系列，也是项目游戏商业化体系的里程碑式作品。首发于2025年3月21日，并于2026年2月5日推出周年庆迭代复刻版本的[幻彩裂变X]系列，覆盖骇浪突击步枪、威压冲锋枪、湮灭狙击枪、通用手枪、游击小刀5款核心武器，是游戏上线至今人气、营收、口碑均登顶的皮肤系列</p>
+                        <p>该系列的设计完全锚定《界外狂潮》官方定义的「碎片朋克」核心美术风格，以「裂解、重构、相变」为核心纲领，将游戏「捏碎规则」的品牌内核从视觉、交互、精神三个维度完成了全链路落地，同时平衡了FPS游戏的竞技实用性与个性化表达需求</p>
+                        <!-- 触发按钮-->
+                        <button class="connect-btn open-video-btn" data-video-src="https://player.bilibili.com/player.html?isOutside=true&aid=114197945915087&bvid=BV1hEX6YqESb&cid=28982708537&p=1">
+                            ▶ 【幻彩裂变】 实机演示
+                        </button>
+                        <!-- 幻彩裂变的弹窗（加独立ID） -->
+                        <div class="modal-overlay" id="videoModal1">
+                            <div class="video-modal">
+                                <button class="close-btn" data-modal-id="videoModal1">×</button>
+                                <div class="video-container">
+                                    <iframe src="about:blank" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+                                </div>
+                            </div>
+                        </div>                        
+                    </div>
+                    <div class="text-block">
+                         <p style="font-size: 0.9rem; opacity: 0.6;">核心设计纲领：解构主义的碎片朋克落地<br><br>在三大维度完成了兼顾设计创新、竞技适配与商业价值的落地：材质上以深空哑光黑为基底叠加纳米级镭射幻彩镀膜，实现随视角与光线动态流转的无定形变色效果，
+                            跳脱传统 FPS 皮肤固定涂装的设计桎梏；结构上通过碎片化几何切割与断层线条模拟核裂变形态，打造裂而一体的解构感，同时严格保留枪械核心人机工学轮廓，色彩上以游戏品牌色为核心构建克制的高饱和撞色体系，严控高饱和色彩分布，兼顾强视觉记忆点与长期对局的无疲劳体验<br><br>
+                            设计全链路设计均实现了个性化表达与硬核竞技需求的平衡</p>
+                    </div>
+                </div>
+                <div class="detail-gallery">
+                        <!-- 占位图 -->
+                        <div class="gallery-item"><img src="pic/幻彩裂变/材质替换1.png" alt="Detail 3"></div>
+                        <div class="gallery-item"><img src="pic/幻彩裂变/模型替换1.png" alt="Detail 4"></div>
+                        <div class="text-block">
+                        <p style="font-size: 0.9rem; opacity: 0.6;">游戏局内自定义展示效果</p>
+                </div>
+                </div>
+                <div class="detail-gallery">
+                        <!-- 占位图 -->
+                        <div class="gallery-item-fullweight"><img src="pic/幻彩裂变/材质替换3.png" alt="Detail 12"></div>
+                </div>  
+                <div class="detail-gallery">
+                        <!-- 占位图 -->
+                        <div class="gallery-item-fullweight"><img src="pic/幻彩裂变/材质替换4.png" alt="Detail 12"></div>
+                </div>  
+                <div class="text-block">
+                        <p class="card-desc">同时，系列新增了可自定义的进阶设计：玩家可解锁 4种配色方案、3种材质变体（透明 / 粗糙 / 斑纹）、3种模型细节调整，实现了千人千枪的个性化表达，大幅拉长了皮肤的内容消耗周期，也提升
+                        了玩家的付费意愿。<br><br>项目整体的自定义化设计便是由幻彩裂变系列初创，并且设立规定适配所有EPIC品级皮肤，并在后续开发中针对不同需求不断改进优化迭代，实现了自定义特效、音效、动作、模型等等内容的自定义功能,玩家可以由传统简单的加法在这个自定义系统中改变为乘法，创造出NxNxNx....等等搭配</p>
+                </div>
+                <div class="detail-gallery">
+                        <!-- 占位图 -->
+                        <div class="gallery-item-fullweight"><img src="pic/幻彩裂变宣传图.jpg" alt="Detail 7"></div>
+                </div>
+                <div class="text-block">
+                        <p>幻彩裂变系列作为游戏首个顶级皮肤系列，是支撑游戏营收的核心支柱。彩裂变系列于2025年3月21日上线后，直接带动《界外狂潮》Steam全球畅销榜排名从Top20回升至Top8</p>
+                </div>
+            </div>
+
+            <!-- Detail 02 -->
+            <div id="detail-02" class="detail-view">
+                <div class="back-btn" onclick="showHome()"><span>←</span> Back</div>
+                <div class="detail-header">
+                    <h2>幽灵舰队 系列</h2>
+                </div>
+                <div class="detail-gallery">
+                    <div class="gallery-item-fullweight"><img src="pic/幽灵舰队/战备库展示.png" alt="Detail 8"></div>
+                </div>
+                <div class="detail-content">
+                    <div class="text-block">
+                        <p>幽灵舰队系列是《界外狂潮》公测后首个暗黑叙事风极致品级（红品）标杆系列，也是游戏第一赛季末的核心商业化爆点</p>
+                        <p>系列于2025年6月13日正式上线限定奖池，以「冥帆破暗影，苦海渡幽魂」为核心主题，覆盖湮灭狙击枪（极致红品）、戒律突击步枪、凶兽手枪、屠夫霰弹枪、反手刀近战武器共5款核心主战武器,
+                        配套专属挂饰、击败计数器、名片等衍生道具，是游戏内首个实现「配色 - 材质 - 挂件全自定义」的皮肤系列，也是仅次于幻彩裂变系列的第二大营收支柱</p>
+                        <!-- 触发按钮-->
+                        <button class="connect-btn open-video-btn" data-video-src="https://player.bilibili.com/player.html?isOutside=true&aid=114670056774641&bvid=BV1h9MFzREBM&cid=30456809550&p=1">
+                            ▶ 【幽灵舰队】 实机演示
+                        </button>
+                        <!-- 幽灵舰队的弹窗（加独立ID + data-modal-id） -->
+                        <div class="modal-overlay" id="videoModal2">
+                            <div class="video-modal">
+                                <button class="close-btn" data-modal-id="videoModal2">×</button>
+                                <div class="video-container">
+                                    <iframe src="about:blank" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-block">
+                         <p style="font-size: 0.9rem; opacity: 0.6;">系列以大航海时代失落的幽灵舰队、深海古文明遗骸、克苏鲁式诡秘氛围为底层创作灵感，把枪
+                            械重构为沉睡百年的深海舰船，让每一次射击都成为幽灵舰队的炮火轰鸣，与同期上线的第二赛季深海主题版本以及冥府监牢新地图形成完整的世界观叙事闭环。</p>
+                    </div>
+                </div>
+                <div class="detail-gallery">
+                        <!-- 占位图 -->
+                        <div class="gallery-item"><img src="pic/幽灵舰队/换材质2.png" alt="Detail 9"></div>
+                        <div class="gallery-item"><img src="pic/幽灵舰队/换模型2.png" alt="Detail 10"></div>
+                        <div class="text-block">
+                        <p style="font-size: 0.9rem; opacity: 0.6;">游戏局内自定义展示效果</p>
+                </div>
+                    </div>
+                    <div class="text-block">
+                        <p class="card-desc">系列采用了核心爆品+次核心覆盖+填充提效的三层商业化设计技巧，完美匹配奖池的商业化规则，实现了付费用户的全覆盖<br><br>
+                        将湮灭狙击枪作为奖池核心红品，配置完整的专属动画、终结特效、全维度自定义选项，打造 “排面拉满” 的顶级体验，精准击中重氪玩家的炫耀性需求；
+                        4把珍品级金皮采用统一的设计语言与基础特效，保留核心的材质、配色自定义选项，同时针对枪械定位做差异化设计，覆盖中轻度付费玩家的需求，让预算有限的玩家也能体验到系列的核心设计；
+                        配套的挂饰、贴纸、击败计数器等道具，均采用同系列的幽灵船设计语言，既提升了奖池的性价比，也让全套抽取的玩家获得完整的系列体验，同时降低了奖池的 “垃圾奖励” 负面感受
+                    </p>
+                </div>
+                <div class="detail-gallery">
+                        <!-- 占位图 -->
+                        <div class="gallery-item-fullweight"><img src="pic/幽灵舰队/战备库展示2.png" alt="Detail 12"></div>
+                </div>           
+                <div class="detail-gallery">
+                        <!-- 占位图 -->
+                        <div class="gallery-item-fullweight"><img src="pic/幽灵舰队/展示3.png" alt="Detail 12"></div>
+                </div>       
+                <div class="text-block">
+                        <p>系列2025年6月13日上线后，直接带动《界外狂潮》Steam 国区热销榜从上线前的Top35回升至Top12，全球热销榜进入Top30，是公测后除幻彩裂变系列外，第二个带动游戏进入全球热销榜 Top30 的皮肤系列
+                            上线首周，该系列奖池成为第一赛季末的核心营收爆点，成功扭转了公测后游戏营收下滑的趋势。
+                        </p>
+                </div>
+            </div>
+
+            <!-- Detail 03 -->
+            <div id="detail-03" class="detail-view">
+                <div class="back-btn" onclick="showHome()"><span>←</span> Back</div>
+                <div class="detail-header">
+                    <h2>爆裂引擎 系列</h2>
+                </div>
+                <div class="detail-gallery">
+                    <div class="gallery-item-fullweight"><img src="pic/爆裂摩托/展示1.png" alt="Detail 8"></div>
+                </div>
+                <div class="detail-content">
+                    <div class="text-block">
+                        <p>爆裂引擎系列是《界外狂潮》第二赛季末上线的极致品级（红品）标杆系列，也是游戏首个载具工业风顶级皮肤系列</p>
+                        <p>于2025年10月9日正式上线限定奖池，核心主打款为戒律突击步枪红品，覆盖游击冲锋枪、VR 霰弹枪、名流狙击枪、通用手枪共5款全品类
+                            主战武器，配套专属摩托主题挂饰、击败计数器、名片等衍生道具，是游戏上线后第三款营收破百万美金的皮肤系列，商业表现仅次于幻彩裂变、幽灵舰队两大标杆系列
+                        </p>
+                        <!-- 触发按钮-->
+                        <button class="connect-btn open-video-btn" data-video-src="https://player.bilibili.com/player.html?isOutside=true&aid=115292407667637&bvid=BV1Nbn2zkEdd&cid=32742900024&p=1">
+                            ▶ 【爆裂引擎】 实机演示
+                        </button>
+                        <!-- 幽灵舰队的弹窗（加独立ID + data-modal-id） -->
+                        <div class="modal-overlay" id="videoModal3">
+                            <div class="video-modal">
+                                <button class="close-btn" data-modal-id="videoModal3">×</button>
+                                <div class="video-container">
+                                    <iframe src="about:blank" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-block">
+                         <p style="font-size: 0.9rem; opacity: 0.6;">以机械轰鸣、爆裂突进」为核心纲领，以美式重机、性能超跑的工业机械设计为底层创作灵感，完成了载具工业设计→枪械视觉转译→竞技场
+                            景适配的全链路落地，彻底跳脱了传统枪械皮肤 “主题元素贴皮” 的浅层设计逻辑，构建了一套完整的、可复用的工业风竞技皮肤设计语言体系</p>
+                    </div>
+                </div>
+                <div class="detail-gallery">
+                        <!-- 占位图 -->
+                        <div class="gallery-item"><img src="pic/爆裂摩托/换色2.png" alt="Detail 9"></div>
+                        <div class="gallery-item"><img src="pic/爆裂摩托/模型1.png" alt="Detail 10"></div>
+                        <div class="text-block">
+                        <p style="font-size: 0.9rem; opacity: 0.6;">游戏局内自定义展示效果</p>
+                </div>
+                    </div>
+                    <div class="text-block">
+                        <p class="card-desc">
+                        所有设计都围绕 “动能传递” 展开，从静态握持的机械蛰伏、到切枪的引擎启动、再到连射的转速拉升、最终到击杀的动力爆发，完整呈现
+                        了「怠速 - 启动 - 提速 - 爆发」的重机行驶全流程，让枪械的视觉、音效反馈与玩家的操作节奏、战术动作完全同频；以高温淬火哑光合金为核心基底，复刻重机车架的高
+                        强度金属质感，表面做细微的磨砂颗粒处理，既还原了工业金属的厚重感，又避免了强光场景下的反光刺眼问题，适配全场景对局的需求
+                        在枪身非核心区域，叠加多层金属烤漆、电镀铬材质，复刻重机油箱的高光烤漆效果，同时在枪管、枪托处做了阳极氧化彩色金属点缀，保证
+                        了视觉上的高级质感，严格控制了高光材质的分布面积，避免出现视觉干扰
+                    </p>
+                </div>
+                <div class="detail-gallery">
+                        <!-- 占位图 -->
+                        <div class="gallery-item-fullweight"><img src="pic/爆裂摩托/换色1.png" alt="Detail 12"></div>
+                </div>           
+                <div class="detail-gallery">
+                        <!-- 占位图 -->
+                        <div class="gallery-item-fullweight"><img src="pic/爆裂摩托/换色3.png" alt="Detail 12"></div>
+                </div>       
+                <div class="detail-gallery">
+                        <!-- 占位图 -->
+                        <div class="gallery-item-fullweight"><img src="pic/爆裂摩托/换色4.png" alt="Detail 12"></div>
+                </div>    
+                <div class="text-block">
+                        <p>系列2025年10月9日上线后，直接带动《界外狂潮》Steam国区热销榜从上线前的Top42回升至Top18，全球热销榜进
+                            入Top45，是公测后除幻彩裂变、幽灵舰队系列外，第三个带动游戏进入全球热销榜Top50的皮肤系列
+                        </p>
+                </div>
+            </div>
+
+            <!-- Detail 04 -->
+            <div id="detail-04" class="detail-view">
+                <div class="back-btn" onclick="showHome()"><span>←</span> Back</div>
+                <div class="detail-header">
+                    <h2>盛夏水枪 系列</h2>
+                </div>
+                <div class="detail-gallery">
+                    <div class="gallery-item-fullweight"><img src="pic/盛夏水枪/3.png" alt="Detail 8"></div>
+                </div>
+                <div class="detail-content">
+                    <div class="text-block">
+                        <p>盛夏水枪作为《界外狂潮》夏季限定主题套装，区别于极致品质奖池模式，采用直购组合包+单款解锁双轨商业化策略销售</p>
+                        <p>于2025年7月10日正式上线限定奖池，这个以全民趣味外观理念的系列覆盖开路者轻机枪、屠夫霰弹枪、湮灭狙击枪、通用手枪及重势近战武器（大锤）共5款全品类主战装备，
+                            以「夏日水枪大战」为核心主题，配套5款糖果异色换色及小黄鸭彩蛋挂件，是项目首个趣味标签的枪械皮肤系列
+                        </p>
+                        <!-- 触发按钮-->
+                        <button class="connect-btn open-video-btn" data-video-src="https://player.bilibili.com/player.html?isOutside=true&aid=114811388235905&bvid=BV1xQ3yz2E4C&cid=30901535221&p=1">
+                            ▶ 【盛夏水枪】 实机演示
+                        </button>
+                        <!-- 幽灵舰队的弹窗（加独立ID + data-modal-id） -->
+                        <div class="modal-overlay" id="videoModal4">
+                            <div class="video-modal">
+                                <button class="close-btn" data-modal-id="videoModal4">×</button>
+                                <div class="video-container">
+                                    <iframe src="about:blank" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-block">
+                         <p style="font-size: 0.9rem; opacity: 0.6;">
+                            透明亲水基底、软质橡胶结构、糖果高光点缀三层材质设计，1：1复刻儿童高压水枪的真实质感，在视觉上完成玩具化重构，但在物理轮廓与尺寸上完全沿用原始枪械数据
+                         </p>
+                    </div>
+                </div>
+                <div class="detail-gallery">
+                        <!-- 占位图 -->
+                        <div class="gallery-item"><img src="pic/盛夏水枪/1.png" alt="Detail 9"></div>
+                        <div class="gallery-item"><img src="pic/盛夏水枪/2.png" alt="Detail 10"></div>
+                        <div class="text-block">
+                        <p style="font-size: 0.9rem; opacity: 0.6;">游戏局内自定义展示效果</p>
+                </div>
+                    </div>
+                    <div class="text-block">
+                        <p class="card-desc">
+                            系列静态设计严格遵循玩具拟态配合功能对应的原则，在不改变枪械核心轮廓与人机工学的前提下，将夏日水枪的核心视觉特征与枪械结构完成精准映射
+                            搭配同期上线的界外游戏主题，枪身主体采用高透亚克力拟态设计，模拟水枪的透明储水仓，内部加入实时物理晃动的液体效果，随枪械移动呈现自然的水浪起伏，在握把、护木边缘等核心操作区域，采用
+                            哑光软橡胶质感，复刻玩具水枪的防滑手柄设计，枪口、水箱盖等非核心区域，采用糖果色高光烤漆，模拟水枪的装饰性部件
+                    </p>
+                </div>
+                <div class="detail-gallery">
+                        <!-- 占位图 -->
+                        <div class="gallery-item-fullweight"><img src="pic/盛夏水枪/4.png" alt="Detail 12"></div>
+                </div>           
+                <div class="detail-gallery">
+                        <!-- 占位图 -->
+                        <div class="gallery-item-fullweight"><img src="pic/盛夏水枪/5.png" alt="Detail 12"></div>
+                </div>       
+                <div class="detail-gallery">
+                        <!-- 占位图 -->
+                        <div class="gallery-item-fullweight"><img src="pic/盛夏水枪/6.png" alt="Detail 12"></div>
+                </div>    
+                <div class="text-block">
+                        <p>系列2025年7月10日上线后，带动《界外狂潮》Steam 国区免费游戏热销榜从上线前的Top28跃升至Top9，全球免费游戏热销榜进入Top22。
+                            该系列优秀的武器整体持有率，远超非红品级的持有率
+                        </p>
+                </div>
+            </div>
+
+            <!-- Detail 05 -->
+            <div id="detail-05" class="detail-view">
+                <div class="back-btn" onclick="showHome()"><span>←</span> Back</div>
+                <div class="detail-header">
+                    <h2>欢声笑语 系列</h2>
+                </div>
+                <div class="detail-gallery">
+                    <div class="gallery-item-fullweight"><img src="pic/欢声笑语/5.png" alt="Detail 8"></div>
+                </div>
+                <div class="detail-content">
+                    <div class="text-block">
+                        <p>欢声笑语系列是《界外狂潮》于2025年9月10日随「玩具狂想」主题活动上线的珍品级（金皮）限定武器套装，是游戏首个以表情扭蛋+互动情绪为核心的武器皮肤系列</p>
+                        <p>系列覆盖骇浪、威压步枪、屠夫霰弹枪、道具枪（四型）、扭蛋锤子近战共5款全品类主战装备，采用组合包66折和单款
+                            解锁双轨商业化策略，配套5款基础换色与表情计数器，是游戏2025年Q4非红品皮肤中口碑与营收双优的标杆产品
+                        </p>
+                        <!-- 触发按钮-->
+                        <button class="connect-btn open-video-btn" data-video-src="https://player.bilibili.com/player.html?isOutside=true&aid=115172685387897&bvid=BV1uwYAzsE8G&cid=32260951824&p=1">
+                            ▶ 【欢声笑语】 实机演示
+                        </button>
+                        <!-- 幽灵舰队的弹窗（加独立ID + data-modal-id） -->
+                        <div class="modal-overlay" id="videoModal5">
+                            <div class="video-modal">
+                                <button class="close-btn" data-modal-id="videoModal5">×</button>
+                                <div class="video-container">
+                                    <iframe src="about:blank" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-block">
+                         <p style="font-size: 0.9rem; opacity: 0.6;">
+                            透明亲水基底、软质橡胶结构、糖果高光点缀三层材质设计，1：1复刻儿童高压水枪的真实质感，在视觉上完成玩具化重构，但在物理轮廓与尺寸上完全沿用原始枪械数据
+                         </p>
+                    </div>
+                </div>
+                <div class="detail-gallery">
+                        <!-- 占位图 -->
+                        <div class="gallery-item"><img src="pic/欢声笑语/9.png" alt="Detail 9"></div>
+                        <div class="gallery-item"><img src="pic/欢声笑语/10.png" alt="Detail 10"></div>
+                        <div class="text-block">
+                        <p style="font-size: 0.9rem; opacity: 0.6;">游戏局内自定义展示效果</p>
+                </div>
+                    </div>
+                    <div class="text-block">
+                        <p class="card-desc">
+                            系列静态设计严格遵循玩具拟态配合功能对应的原则，在不改变枪械核心轮廓与人机工学的前提下，将夏日水枪的核心视觉特征与枪械结构完成精准映射
+                            搭配同期上线的界外游戏主题，枪身主体采用高透亚克力拟态设计，模拟水枪的透明储水仓，内部加入实时物理晃动的液体效果，随枪械移动呈现自然的水浪起伏，在握把、护木边缘等核心操作区域，采用
+                            哑光软橡胶质感，复刻玩具水枪的防滑手柄设计，枪口、水箱盖等非核心区域，采用糖果色高光烤漆，模拟水枪的装饰性部件
+                    </p>
+                </div>
+                <div class="detail-gallery">
+                        <!-- 占位图 -->
+                        <div class="gallery-item-fullweight"><img src="pic/欢声笑语/1.png" alt="Detail 12"></div>
+                </div>           
+                <div class="detail-gallery">
+                        <!-- 占位图 -->
+                        <div class="gallery-item-fullweight"><img src="pic/欢声笑语/2.png" alt="Detail 12"></div>
+                </div>       
+                <div class="detail-gallery">
+                        <!-- 占位图 -->
+                        <div class="gallery-item-fullweight"><img src="pic/欢声笑语/3.png" alt="Detail 12"></div>
+                </div>    
+                <div class="detail-gallery">
+                        <!-- 占位图 -->
+                        <div class="gallery-item-fullweight"><img src="pic/欢声笑语/4.png" alt="Detail 12"></div>
+                </div>    
+                <div class="text-block">
+                        <p>系列2025年7月10日上线后，带动《界外狂潮》Steam 国区免费游戏热销榜从上线前的Top28跃升至Top9，全球免费游戏热销榜进入Top22。
+                            该系列优秀的武器整体持有率，远超非红品级的持有率
+                        </p>
+                </div>
+            </div>       
+            
+            <!-- Detail 06 -->
+            <div id="detail-06" class="detail-view">
+                <div class="back-btn" onclick="showHome()"><span>←</span> Back</div>
+                <div class="detail-header">
+                    <h2>都市夜舞 系列</h2>
+                </div>
+                <div class="detail-gallery">
+                    <div class="gallery-item-fullweight"><img src="pic/都市夜舞/6.png" alt="Detail 8"></div>
+                </div>
+                <div class="detail-content">
+                    <div class="text-block">
+                        <p>都市夜舞系列是《界外狂潮》于2025年4月1日随「迪斯科狂欢」主题活动上线的珍品级（金皮）限定武器套装，作为传承80年代迪斯科文化为核心而设计的皮肤系列</p>
+                        <p>作为复古派对式武器，系列覆盖炸月射手不强、鬼鲛轻机枪、恶犬冲锋枪、通用手枪、战斧游击近战共5款全品类主战装备，采用组合包限时折扣+单款解锁双轨商业化策略，配套5款霓虹渐变色与专属击杀舞蹈彩蛋，
+                            是游戏2025年Q2嫉妒非红品皮肤中风格辨识度最高、沉浸感最强的标杆产品
+                        </p>
+                        <!-- 触发按钮-->
+                        <button class="connect-btn open-video-btn" data-video-src="https://player.bilibili.com/player.html?isOutside=true&aid=114254988449693&bvid=BV1PqZEYCEwQ&cid=29159526101&p=1">
+                            ▶ 【都市夜舞】 实机演示
+                        </button>
+                        <!-- 幽灵舰队的弹窗（加独立ID + data-modal-id） -->
+                        <div class="modal-overlay" id="videoModal6">
+                            <div class="video-modal">
+                                <button class="close-btn" data-modal-id="videoModal6">×</button>
+                                <div class="video-container">
+                                    <iframe src="about:blank" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-block">
+                         <p style="font-size: 0.9rem; opacity: 0.6;">
+                            设计方向对准80年代迪斯科舞厅的复古质感，采取哑光塑料材质、透明玻璃霓虹灯球以及金属反光漆面作为材质选材，通过迪斯科灯球、霓虹光效、律动音效、击杀舞蹈等强共鸣元素，让武器成为派对氛围的核心载体
+                         </p>
+                    </div>
+                </div>
+                <div class="detail-gallery">
+                        <!-- 占位图 -->
+                        <div class="gallery-item"><img src="pic/都市夜舞/1.png" alt="Detail 9"></div>
+                        <div class="gallery-item"><img src="pic/都市夜舞/2.png" alt="Detail 10"></div>
+                        <div class="text-block">
+                        <p style="font-size: 0.9rem; opacity: 0.6;">游戏局内自定义展示效果</p>
+                </div>
+                    </div>
+                    <div class="text-block">
+                        <p class="card-desc">
+                            枪身主体采用哑光 ABS 塑料拟态，模拟迪厅音响与设备外壳的磨砂质感，色彩以纯黑、深灰为基底，枪身中部设旋转幻彩灯球（对应弹匣 / 枪身核心区），内置多色霓虹灯带，随枪械移
+                            动持续旋转，透明材质仅在非瞄准区域呈现，不影响瞄准基线的同时，枪管边缘、握把防滑区、灯球支架采用金属反光质感，模拟迪厅设备的金属框架，在视觉上完成派对化重构，但物理轮
+                            廓与尺寸完全沿用原始枪械数据，严格遵守派对沉浸服务于竞技，外观不影响平衡的核心准则
+                    </p>
+                </div>
+                <div class="detail-gallery">
+                        <!-- 占位图 -->
+                        <div class="gallery-item-fullweight"><img src="pic/都市夜舞/3.png" alt="Detail 12"></div>
+                </div>           
+                <div class="detail-gallery">
+                        <!-- 占位图 -->
+                        <div class="gallery-item-fullweight"><img src="pic/都市夜舞/4.png" alt="Detail 12"></div>
+                </div>       
+                <div class="detail-gallery">
+                        <!-- 占位图 -->
+                        <div class="gallery-item-fullweight"><img src="pic/都市夜舞/5.png" alt="Detail 12"></div>
+                </div>    
+                <div class="text-block">
+                        <p>系列上线后，带领《界外狂潮》Steam 国区免费游戏热销榜从上线前Top32跃升至Top11，全球免费游戏热销榜进入Top25。商业化上跳脱传统金皮现代思维惯性的机械美感，验证了以复古潮流为核心的
+                            皮肤设计可以在保证沉浸感的同时获得硬核竞技玩家的认可
+                        </p>
+                </div>
+            </div>   
+
+            <!-- Detail 07 -->
+            <div id="detail-07" class="detail-view">
+                <div class="back-btn" onclick="showHome()"><span>←</span> Back</div>
+                <div class="detail-header">
+                    <h2>小狗蛇联动-知心萌物 系列</h2>
+                </div>
+                <div class="detail-gallery">
+                    <div class="gallery-item-fullweight"><img src="pic/知心萌物/5.png" alt="Detail 8"></div>
+                </div>
+                <div class="detail-content">
+                    <div class="text-block">
+                        <p>知心萌物系列是《界外狂潮》于2025年10月10日随「萌宠集结」主题活动上线的珍品级（金皮）限定武器套装，为游戏与原创IP「小狗蛇点点」的官方联动产品</p>
+                        <p>采用组合包限时折扣 + 单款解锁 + 双等级形态的商业化策略，配套专属萌物击杀反馈与互动彩蛋，系列覆盖纪律冲锋枪、AR15步枪、名流霰弹枪、通用手枪、游击近战共5款全品类主战装备
+                        </p>
+                        <!-- 触发按钮-->
+                        <button class="connect-btn open-video-btn" data-video-src="https://player.bilibili.com/player.html?isOutside=true&aid=115292592214115&bvid=BV1xmn1z6ECZ&cid=32744604295&p=1">
+                            ▶ 【知心萌物】 实机演示
+                        </button>
+                        <!-- 幽灵舰队的弹窗（加独立ID + data-modal-id） -->
+                        <div class="modal-overlay" id="videoModal7">
+                            <div class="video-modal">
+                                <button class="close-btn" data-modal-id="videoModal7">×</button>
+                                <div class="video-container">
+                                    <iframe src="about:blank" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-block">
+                         <p style="font-size: 0.9rem; opacity: 0.6;">
+                            知心萌物系列以IP联动与治愈感为核心，打造轻量化软萌风格武器，兼顾竞技需求与休闲体验，覆盖全年龄段及各层级玩家。
+                         </p>
+                    </div>
+                </div>
+                <div class="detail-gallery">
+                        <!-- 占位图 -->
+                        <div class="gallery-item"><img src="pic/知心萌物/2.png" alt="Detail 9"></div>
+                        <div class="gallery-item"><img src="pic/知心萌物/6.png" alt="Detail 10"></div>
+                        <div class="text-block">
+                        <p style="font-size: 0.9rem; opacity: 0.6;">游戏局内自定义展示效果</p>
+                </div>
+                    </div>
+                    <div class="text-block">
+                        <p class="card-desc">
+                            枪身主体采用哑光毛绒拟态，模拟萌宠玩偶的柔软质感，色彩以奶白、浅粉、浅蓝、浅黄等马卡龙色为主，枪身中部设透明软胶萌宠仓，枪管边缘、握把防滑区、萌宠五官采用软质橡胶质感，模拟萌宠玩偶的五官与毛发纹理，
+                            萌宠主色上小狗=浅粉、蛇=浅蓝、点点=浅黄，采用低饱和高明度处理，模拟萌宠玩偶的柔和色彩
+                </div>
+                <div class="detail-gallery">
+                        <!-- 占位图 -->
+                        <div class="gallery-item-fullweight"><img src="pic/知心萌物/1.png" alt="Detail 12"></div>
+                </div>           
+                <div class="detail-gallery">
+                        <!-- 占位图 -->
+                        <div class="gallery-item-fullweight"><img src="pic/知心萌物/3.png" alt="Detail 12"></div>
+                </div>       
+                <div class="detail-gallery">
+                        <!-- 占位图 -->
+                        <div class="gallery-item-fullweight"><img src="pic/知心萌物/4.png" alt="Detail 12"></div>
+                </div>  
+                <div class="text-block">
+                        <p>知心萌物系列作为2025年Q4核心IP联动内容，凭借「萌宠IP+软萌治愈」的差异化定位与创新商业化策略，在Steam平台取得优异销售成绩，跳出传统联动贴贴图的惯性，精准击中IP粉丝情怀需求
+                        </p>
+                </div>
+            </div>  
+
+            <!-- Detail 08 -->
+            <div id="detail-08" class="detail-view">
+                <div class="back-btn" onclick="showHome()"><span>←</span> Back</div>
+                <div class="detail-header">
+                    <h2>冰雪风暴 系列</h2>
+                </div>
+                <div class="detail-gallery">
+                    <div class="gallery-item-fullweight"><img src="pic/冰雪风暴/3.png" alt="Detail 8"></div>
+                </div>
+                <div class="detail-content">
+                    <div class="text-block">
+                        <p>冰雪风暴系列是《界外狂潮》于2026年1月1日随冬日庆典活动上线的珍品级（金皮）限定武器套装，主打极地作战美学</p>
+                        <p>覆盖戒律步枪、开路者轻机枪、名流射手步枪、冷臂手枪、游击近战5款全品类主战装备，采用组合包限时折扣、单款解锁、进阶
+                            自定义的商业化策略，配套专属冰雪终结动画与寒霜特效，是游戏2026年开年冬日主题付费核心、竞技向外观标杆产品
+                        </p>
+                        <!-- 触发按钮-->
+                        <button class="connect-btn open-video-btn" data-video-src="https://player.bilibili.com/player.html?isOutside=true&aid=115853689491919&bvid=BV12ui2B8E5b&cid=35244868591&p=1">
+                            ▶ 【冰雪风暴】 实机演示
+                        </button>
+                        <!-- 幽灵舰队的弹窗（加独立ID + data-modal-id） -->
+                        <div class="modal-overlay" id="videoModal8">
+                            <div class="video-modal">
+                                <button class="close-btn" data-modal-id="videoModal8">×</button>
+                                <div class="video-container">
+                                    <iframe src="about:blank" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-block">
+                         <p style="font-size: 0.9rem; opacity: 0.6;">
+                            冰雪风暴系列以极地肃杀与科技质感为纲领，深度融合冰雪元素与枪械功能，主打轻量化冷冽风格
+                         </p>
+                    </div>
+                </div>
+                <div class="detail-gallery">
+                        <!-- 占位图 -->
+                        <div class="gallery-item"><img src="pic/冰雪风暴/1.png" alt="Detail 9"></div>
+                        <div class="gallery-item"><img src="pic/冰雪风暴/2.png" alt="Detail 10"></div>
+                        <div class="text-block">
+                        <p style="font-size: 0.9rem; opacity: 0.6;">游戏局内自定义展示效果</p>
+                </div>
+                    </div>
+                    <div class="text-block">
+                        <p class="card-desc">
+                            枪身主体为冰蓝哑光合金，护木覆寒霜纹理，枪管为冰棱造型，枪托为极地金属拼接，枪身积雪效果采用动态材质进行制作，积雪将伴
+                            随枪械内剩余子弹数量动态变化，当玩家进入Reload状态后跟随动画刷新积雪效果，同时积雪多少将会影响所有动画从Idle到Weaponcheck
+                            状态的所有粒子效果
+                </div>
+                <div class="detail-gallery">
+                        <!-- 占位图 -->
+                        <div class="gallery-item-fullweight"><img src="pic/冰雪风暴/4.png" alt="Detail 12"></div>
+                </div>           
+                <div class="detail-gallery">
+                        <!-- 占位图 -->
+                        <div class="gallery-item-fullweight"><img src="pic/冰雪风暴/5.png" alt="Detail 12"></div>
+                </div>       
+                <div class="text-block">
+                        <p>冰雪风暴系列成为冬日主题付费核心与竞技向外观标杆，核心在于精准击中冬日主题需求，首次上架后玩家反响优秀，并于2月进行冬日返场
+                        </p>
+                </div>
+            </div> 
+
+            <!-- Detail 09 -->
+            <div id="detail-09" class="detail-view">
+                <div class="back-btn" onclick="showHome()"><span>←</span> Back</div>
+                <div class="detail-header">
+                    <h2>部分EpicB-EpicA 系列</h2>
+                </div>
+                <!-- 01-->
+                <div class="detail-gallery">
+                    <div class="gallery-item-fullweight"><img src="pic/EPIC/1.png" alt="Detail 8"></div>
+                </div>
+                <div class="detail-content">
+                    <div class="text-block">
+                        <p class="card-desc">
+                        《界外》2025年5月上线的以西方黑龙为原型，采用黑曜石加岩浆红主调，龙鳞龙骨为结构配合龙形动态交互为设计方向的一款珍品品级直购皮肤</p>
+                        <!-- 触发按钮-->
+                        <button class="connect-btn open-video-btn" onclick="window.open('https://www.bilibili.com/video/BV1SJ5Tz9EMP/?share_source=copy_web&vd_source=f69d8eff8e558a3ee76c123e3eaaad02', '_blank')"style="cursor: pointer;">
+                            ▶ 【黑曜龙骸】 实机演示
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 02-->
+                <div class="detail-gallery">
+                    <div class="gallery-item-fullweight"><img src="pic/EPIC/2.png" alt="Detail 8"></div>
+                </div>
+                <div class="detail-content">
+                    <div class="text-block">
+                        <p class="card-desc">
+                        一款主打治愈浪漫的枪械皮肤，以甜美元素加上金粉玫瑰配色为主题设计语言，搭配蝴蝶结/丘比特装饰，配合爱心交互与玫瑰绽放击杀反馈的一款珍品品级皮肤</p>
+                        <!-- 触发按钮-->
+                        <button class="connect-btn open-video-btn" onclick="window.open('https://www.bilibili.com/video/BV1X3jJzeErw/?share_source=copy_web&vd_source=f69d8eff8e558a3ee76c123e3eaaad02', '_blank')"style="cursor: pointer;">
+                            ▶ 【爱之花】 实机演示
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 03-->
+                <div class="detail-gallery">
+                    <div class="gallery-item-fullweight"><img src="pic/EPIC/3.png" alt="Detail 8"></div>
+                </div>
+                <div class="detail-content">
+                    <div class="text-block">
+                        <p class="card-desc">
+                        系列以暗黑妖异花卉为核心，融合幽冥质感与诡秘特效，营造神秘冷艳的战场风格，是作为S1赛季伴随幻彩裂变Legend系列上线的EpicA高品级皮肤</p>
+                        <!-- 触发按钮-->
+                        <button class="connect-btn open-video-btn" onclick="window.open('https://www.bilibili.com/video/BV1eiQGYtEVG/?share_source=copy_web&vd_source=f69d8eff8e558a3ee76c123e3eaaad02', '_blank')"style="cursor: pointer;">
+                            ▶ 【冥界妖兰】 实机演示
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 04-->
+                <div class="detail-gallery">
+                    <div class="gallery-item-fullweight"><img src="pic/EPIC/4.png" alt="Detail 8"></div>
+                </div>
+                <div class="detail-content">
+                    <div class="text-block">
+                        <p class="card-desc">
+                        奢华名品典藏级直售系列，以高端奢侈品为设计灵感，贵金属枪身搭配经典皮革纹理，弹头镶钻细节，极致奢华质感</p>
+                        <!-- 触发按钮-->
+                        <button class="connect-btn open-video-btn" onclick="window.open('https://www.bilibili.com/video/BV1WuT4z2EVF/?share_source=copy_web&vd_source=f69d8eff8e558a3ee76c123e3eaaad02', '_blank')"style="cursor: pointer;">
+                            ▶ 【奢华名品】 实机演示
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 05-->
+                <div class="detail-gallery">
+                    <div class="gallery-item-fullweight"><img src="pic/EPIC/5.png" alt="Detail 8"></div>
+                </div>
+                <div class="detail-content">
+                    <div class="text-block">
+                        <p class="card-desc">
+                        深海魔幻典藏级直售系列，以深海海妖、潮汐漩涡为设计核心，枪身融入珊瑚、贝壳、流光水纹与半透明幻鳞材质，检视触发海妖低语与流光波动特效，开火伴随潮汐粒子与幻色拖尾，营造神秘魅惑的深海战场氛围</p>
+                        <!-- 触发按钮-->
+                        <button class="connect-btn open-video-btn" onclick="window.open('https://www.bilibili.com/video/BV1ga8czLERU/?share_source=copy_web&vd_source=f69d8eff8e558a3ee76c123e3eaaad02', '_blank')"style="cursor: pointer;">
+                            ▶ 【幻潮海妖】 实机演示
+                        </button>
+                    </div>
+                </div>
+
+            </div> 
+        </div>
+    </main>
+    <!-- js管理 -->
+    <script src="js/ArtTestScript.js"></script>
+</body>
+</html>
